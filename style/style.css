@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Animation */
+@keyframes ballAnimation {
+  0% {
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0;
+  }
+  10% {
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0;
+  }
+  20% {
+    margin-top: -100px;
+    margin-left: 0px;
+    border-radius: 40%;
+  }
+  30% {
+    margin-top: -100px;
+    margin-left: -100px;
+    border-radius: 100%;
+  }
+  40% {
+    margin-top: 0px;
+    margin-left: -100px;
+    border-radius: 100%;
+  }
+  50% {
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0%;
+  }
+  60% {
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0%;
+  }
+  70% {
+    margin-top: 100px;
+    margin-left: 0px;
+    border-radius: 40%;
+  }
+  80% {
+    margin-top: 100px;
+    margin-left: 100px;
+    border-radius: 80%;
+  }
+  90% {
+    margin-top: 0px;
+    margin-left: 100px;
+    border-radius: 100%;
+  }
+  100% {
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0;
+  }
+}
+
+@keyframes boxAnimation1 {
+  0% {
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+  }
+  50% {
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+  }
+  60% {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+  90% {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+  100% {
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+  }
+}
+
+@keyframes boxAnimation2 {
+  0% {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+  50% {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+  60% {
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+  }
+  90% {
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+  }
+  100% {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+}
+
+#pageloader {
+  width: 100%;
+  height: 100%;
+  background-color: #6617cb;
+  background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pageloader .ball {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  animation: ballAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: all 0.5s;
+  z-index: 9999;
+}
+
+#pageloader .box {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0 0 10px rgba(0, 90, 46, 0.71);
+  z-index: 1;
+  animation-name: boxAnimation2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: all 0.5s;
+}
+
+#pageloader .box2 {
+  position: absolute;
+  top: calc(50% - 0px);
+  left: calc(50% - 0px);
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0 0 10px rgba(0, 90, 46, 0.71);
+  z-index: 1;
+  animation-name: boxAnimation1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: all 0.5s;
+}
+
+/* Responsive design*/
+@media (min-width: 768px) {
+  /* Animation */
+  @keyframes ballAnimation {
+    0% {
+      margin-top: 0px;
+      margin-left: 0px;
+      border-radius: 0;
+    }
+    10% {
+      margin-top: 0px;
+      margin-left: 0px;
+      border-radius: 0;
+    }
+    20% {
+      margin-top: -300px;
+      margin-left: 0px;
+      border-radius: 40%;
+    }
+    30% {
+      margin-top: -300px;
+      margin-left: -300px;
+      border-radius: 100%;
+    }
+    40% {
+      margin-top: 0px;
+      margin-left: -300px;
+      border-radius: 100%;
+    }
+    50% {
+      margin-top: 0px;
+      margin-left: 0px;
+      border-radius: 0%;
+    }
+    60% {
+      margin-top: 0px;
+      margin-left: 0px;
+      border-radius: 0%;
+    }
+    70% {
+      margin-top: 300px;
+      margin-left: 0px;
+      border-radius: 40%;
+    }
+    80% {
+      margin-top: 300px;
+      margin-left: 300px;
+      border-radius: 80%;
+    }
+    90% {
+      margin-top: 0px;
+      margin-left: 300px;
+      border-radius: 100%;
+    }
+    100% {
+      margin-top: 0px;
+      margin-left: 0px;
+      border-radius: 0;
+    }
+  }
+  @keyframes boxAnimation1 {
+    0% {
+      top: calc(50% - 0px);
+      left: calc(50% - 0px);
+    }
+    50% {
+      top: calc(50% - 0px);
+      left: calc(50% - 0px);
+    }
+    60% {
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+    }
+    90% {
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+    }
+    100% {
+      top: calc(50% - 0px);
+      left: calc(50% - 0px);
+    }
+  }
+  @keyframes boxAnimation2 {
+    0% {
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+    }
+    50% {
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+    }
+    60% {
+      top: calc(50% - 0px);
+      left: calc(50% - 0px);
+    }
+    90% {
+      top: calc(50% - 0px);
+      left: calc(50% - 0px);
+    }
+    100% {
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+    }
+  }
+  #pageloader .ball {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  #pageloader .box {
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    width: 150px;
+    height: 150px;
+    box-shadow: inset 0 0 10px rgba(0, 90, 46, 0.71);
+  }
+  #pageloader .box2 {
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+    width: 150px;
+    height: 150px;
+    box-shadow: inset 0 0 10px rgba(0, 90, 46, 0.71);
+  }
+}
